@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DevJokes
 FUTM-SWE 221: Individual Software Development Project I, Random Joke Generator. A jokes web app where users can browse jokes by category (Programming, Pun, General, Dark), toggle a safe mode filter, and save their favourite jokes.
 
@@ -73,3 +74,7 @@ After starting your chosen server, navigate to `http://localhost:8080` (or the p
 This application integrates with **JokeAPI v2**:
 - **Endpoint**: `https://v2.jokeapi.dev/joke/{category}`
 - **Documentation**: [https://www.jokeapi.dev](https://www.jokeapi.dev)
+=======
+# random-joke-generator-teamelated
+Team Project: Random Joke Generator - TeamElated
+>>>>>>> 45e6cfaa7fad3ac4ec29913a614deea9f92eff48
