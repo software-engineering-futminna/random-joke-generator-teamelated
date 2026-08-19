@@ -1,28 +1,97 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevJokes — Deep Blue Theme</title>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/feed.css">
+  <link rel="stylesheet" href="css/categories.css">
 </head>
-<!-- persistent header -->
-<header>
-
-</header>
-
-
 <body>
-    <!-- Feed: Joke Card -->    
-    <article>
 
-    </article>
-    <!-- Categories-->
-    <article>
+  <!-- Clean Header -->
+  <header>
+    <div class="brand">
+      <i data-lucide="terminal" class="brand-logo"></i>
+      <h1>DevJokes</h1>
+    </div>
+    <div class="safe-mode-container">
+      <span class="safe-mode-label">Safe Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="safe-mode-toggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
 
-    </article>
-    
+  <!-- Main Content Container -->
+  <main id="app">
+    <!-- Feed View -->
+    <section id="feed-view" class="feed-container">
+      <div class="feed-header">
+        <div class="category-pill-active">
+          <span id="active-category-name">Programming</span>
+        </div>
+      </div>
+
+      <!-- Joke Card -->
+      <article id="joke-card-content" class="joke-card">
+        <!-- Rendered dynamically by feed.js -->
+      </article>
+
+      <button id="get-joke-btn" class="primary-btn">
+        <i data-lucide="refresh-cw"></i>
+        <span>Get New Joke</span>
+      </button>
+    </section>
+
+    <!-- Categories View -->
+    <section id="categories-view" class="categories-container" style="display: none;">
+      <div class="categories-header">
+        <h2>Categories</h2>
+        <p class="categories-subtitle">Filter jokes by topic</p>
+      </div>
+      
+      <div id="categories-grid" class="categories-grid">
+        <!-- Rendered dynamically by categories.js -->
+      </div>
+    </section>
+
+    <!-- Favorites View -->
+    <section id="favorites-view" class="favorites-container" style="display: none;">
+      <div class="categories-header">
+        <h2>Saved Favorites</h2>
+        <p class="categories-subtitle">Your bookmarked developer jokes</p>
+      </div>
+      
+      <div id="favorites-list" style="display:flex; flex-direction:column; gap:16px;">
+        <!-- Rendered dynamically by favorites.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav>
+    <a href="#/feed" class="active">
+      <i data-lucide="newspaper"></i>
+      <span>Feed</span>
+    </a>
+    <a href="#/categories">
+      <i data-lucide="layout-grid"></i>
+      <span>Categories</span>
+    </a>
+    <a href="#/favorites">
+      <i data-lucide="bookmark"></i>
+      <span>Saved</span>
+    </a>
+  </nav>
+
+  <!-- Main Script Entry Point -->
+  <script type="module" src="js/main.js"></script>
 </body>
-<!-- persistent navigation panel -->
-<nav>
-
-</nav>
 </html>
